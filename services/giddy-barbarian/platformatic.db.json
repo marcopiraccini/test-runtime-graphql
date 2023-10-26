@@ -1,0 +1,18 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.6.1/db",
+  "db": {
+    "connectionString": "{PLT_GIDDY_BARBARIAN_DATABASE_URL}",
+    "graphql": true,
+    "openapi": true,
+    "schemalock": true
+  },
+  "watch": {
+    "ignore": [
+      "*.sqlite",
+      "*.sqlite-journal"
+    ]
+  },
+  "migrations": {
+    "dir": "migrations"
+  }
+}
