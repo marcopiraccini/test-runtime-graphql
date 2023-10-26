@@ -22,6 +22,7 @@ jobs:
      PLT_SERVER_HOSTNAME: 127.0.0.1 
      PLT_SERVER_LOGGER_LEVEL: info 
      PLT_GIDDY_BARBARIAN_DATABASE_URL: ${{ secrets.PLT_GIDDY_BARBARIAN_DATABASE_URL }}
+     DEPLOY_SERVICE_HOST: https://plt-development-deploy-service.fly.dev 
 
     steps:
       - name: Checkout application project repository
@@ -30,7 +31,7 @@ jobs:
         run: npm install --omit=dev
       - name: Deploy project
         id: deploy-project
-        uses: platformatic/onestep@latest
+        uses: platformatic/onestep@graphql-risk
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           platformatic_workspace_id: ${{ secrets.PLATFORMATIC_DYNAMIC_WORKSPACE_ID }}
