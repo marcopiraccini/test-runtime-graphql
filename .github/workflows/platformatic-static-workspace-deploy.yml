@@ -15,7 +15,7 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     env:
-     PORT: 3043 
+     PORT: 3666 
      PLT_SERVER_HOSTNAME: 127.0.0.1 
      PLT_SERVER_LOGGER_LEVEL: info 
      PLT_GIDDY_BARBARIAN_DATABASE_URL: ${{ secrets.PLT_GIDDY_BARBARIAN_DATABASE_URL }}
