@@ -41,6 +41,8 @@ jobs:
     outputs:
       deployment_id: ${{ steps.deploy-project.outputs.deployment_id }}
   calculate_risk:
+    env: 
+      DEPLOY_SERVICE_HOST: https://plt-development-deploy-service.fly.dev 
     permissions:
       contents: read
       pull-requests: write
