@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Calculate risk
-        uses: platformatic/onestep/actions/calculate-risk@latest
+        uses: platformatic/onestep/actions/calculate-risk@graphql-risk
         if: github.event_name == 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
