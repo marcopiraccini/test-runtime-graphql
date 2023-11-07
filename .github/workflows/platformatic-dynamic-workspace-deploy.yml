@@ -31,7 +31,7 @@ jobs:
         run: npm install --omit=dev
       - name: Deploy project
         id: deploy-project
-        uses: platformatic/onestep@graphql-risk
+        uses: platformatic/onestep@latest
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           platformatic_workspace_id: ${{ secrets.PLATFORMATIC_DYNAMIC_WORKSPACE_ID }}
@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Calculate risk
-        uses: platformatic/onestep/actions/calculate-risk@graphql-risk
+        uses: platformatic/onestep/actions/calculate-risk@latest
         if: github.event_name == 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
